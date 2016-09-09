@@ -33,7 +33,10 @@ class Startups extends Component{
 
   renderRow(startup, sID, rID){
     return(
-      <Text>{startup.name}</Text>
+        <View style={styles.row}>
+            <Text>{startup.name}</Text>
+        </View>
+
     )
   }
 
@@ -46,9 +49,15 @@ class Startups extends Component{
 }
 
 const styles = StyleSheet.create({
-  list: {
-    padding: 32
-  }
+    list: {
+        padding: 32
+    },
+    row: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    padding: 10,
+    backgroundColor: '#F6F6F6',
+  },
 })
 
 export default Startups
